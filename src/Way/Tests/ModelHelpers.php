@@ -59,6 +59,7 @@ trait ModelHelpers {
 
         $class->shouldReceive($type)
               ->with('/' . str_singular($relationship) . '/i')
+              ->withAnyArgs()
               ->once();
 
         $class->$relationship();
